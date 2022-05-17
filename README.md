@@ -58,7 +58,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/r
 
 ### Sanger Somatic Variant Calling Workflow
 
-#### Reference genome and annotation files used by [Sanger caller]((https://github.com/cancerit/dockstore-cgpwgs/wiki/Reference-archives#human-grch38))
+#### Reference genome and annotation files used by Sanger caller
 
 | file name | size | md5sum |
 |--------------------------------|------------|----------------------------------|
@@ -68,7 +68,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/r
 | core_ref_GRCh38_hla_decoy_ebv.tar.gz                | 899142864  | 6448a15bcc8f91271b1870a3ecfcf630 |
 | qcGenotype_GRCh38_hla_decoy_ebv.tar.gz              | 11472540   | 1956e28c1ff99fc877ff61e359e1020c |
 
-The above files need to be staged under a path in the file system where workflow
+The above files were originated from [Sanger](https://github.com/cancerit/dockstore-cgpwgs/wiki/Reference-archives#human-grch38) and need to be staged under a path in the file system where workflow
 jobs can access. The files can be downloaded using `wget`, one example is given as
 below:
 
@@ -78,7 +78,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/s
 
 ### GATK Mutect2 Somatic Variant Calling Workflow
 
-#### Reference files used by [GATK Mutect2 caller](https://console.cloud.google.com/storage/browser/gatk-best-practices/somatic-hg38)
+#### Reference files used by GATK Mutect2 caller
 
 | file name | size | md5sum |
 |--------------------------------|------------|----------------------------------|
@@ -94,7 +94,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/s
 | small_exac_common_3.hg38.vcf.gz.tbi                    | 242095     | f650d1dda6bd68cba65d77f131147985 |
 
 
-The above files need to be staged under a path in the file system where workflow jobs can access. The files can be downloaded using `wget`, one example is given as below:
+The above files were originated from [GATK Best Practices Resources](https://console.cloud.google.com/storage/browser/gatk-best-practices/somatic-hg38) and need to be staged under a path in the file system where workflow jobs can access. The files can be downloaded using `wget`, one example is given as below:
 
 ```
 wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/gatk-resources/1000g_pon.hg38.vcf.gz
