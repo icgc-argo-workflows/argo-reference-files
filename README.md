@@ -68,7 +68,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/r
 | core_ref_GRCh38_hla_decoy_ebv.tar.gz                | 899142864  | 6448a15bcc8f91271b1870a3ecfcf630 |
 | qcGenotype_GRCh38_hla_decoy_ebv.tar.gz              | 11472540   | 1956e28c1ff99fc877ff61e359e1020c |
 
-The above files were originated from [Sanger](https://github.com/cancerit/dockstore-cgpwgs/wiki/Reference-archives#human-grch38) and need to be staged under a path in the file system where workflow
+The above files were originated from [Sanger Reference Archives](https://github.com/cancerit/dockstore-cgpwgs/wiki/Reference-archives#human-grch38) and need to be staged under a path in the file system where workflow
 jobs can access. The files can be downloaded using `wget`, one example is given as
 below:
 
