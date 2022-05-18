@@ -1,4 +1,25 @@
-# Reference files
+# ICGC-ARGO Reference files
+- [Introduction](#introduction)
+- [ICGC-ARGO DNA-Seq Analysis](#icgc-argo-dna-seq-analysis)
+  - [Reference genome](#reference-genome)
+  - [DNA-Seq Alignment](#dna-seq-alignment)
+    - [BWA index and auxilary files](#bwa-index-and-auxilary-files)
+  - [Sanger Somatic Variant Calling](#sanger-somatic-variant-calling)
+    - [Reference genome and annotation files used by Sanger caller](#reference-genome-and-annotation-files-used-by-sanger-caller)
+  - [GATK Mutect2 Somatic Variant Calling](#gatk-mutect2-somatic-variant-calling)
+    - [Reference files used by GATK Mutect2 caller](#reference-files-used-by-gatk-mutect2-caller)
+    - [Additional files needed for scatter and gather](#additional-files-needed-for-scatter-and-gather)
+  - [Open Access Variant Filtering](#open-access-variant-filtering)
+    - [Genomic regions defined in BED format](#genomic-regions-defined-in-bed-format)
+- [ICGC-ARGO RNA-Seq Analysis](#icgc-argo-rna-seq-analysis)
+  - [RNA-Seq reference genome](#rna-seq-reference-genome)
+  - [RNA-Seq genome annotation files](#rna-seq-genome-annotation-files)
+  - [RNA-Seq Alignment](#rna-seq-alignment)
+    - [STAR index and auxilary files](#star-index-and-auxilary-files)
+    - [HiSAT2 index and auxilary files](#hisat2-index-and-auxilary-files)
+    - [Picard-CollectRnaSeqMetrics auxilary files](#picard-collectrnaseqmetrics-auxilary-files)
+
+## Introduction
 
 Reference files used by AROG workflows are hosted at [Cancer Genome Collaboratory](https://cancercollaboratory.org/). File size and MD5 checksums are provided for verifying file integrity after download. Additional files are also included to allow for reproduction of ARGO pipeline analyses. Please see the individual sections for the reference files and how to download and stage them before running the workflows.
 
@@ -56,7 +77,7 @@ below:
 wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/reference-genome/GRCh38_hla_decoy_ebv/GRCh38_hla_decoy_ebv.dict
 ```
 
-### Sanger Somatic Variant Calling Workflow
+### Sanger Somatic Variant Calling
 
 #### Reference genome and annotation files used by Sanger caller
 
@@ -76,7 +97,7 @@ below:
 wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/sanger-variant-calling/qcGenotype_GRCh38_hla_decoy_ebv.tar.gz
 ```
 
-### GATK Mutect2 Somatic Variant Calling Workflow
+### GATK Mutect2 Somatic Variant Calling
 
 #### Reference files used by GATK Mutect2 caller
 
@@ -99,7 +120,7 @@ The above files were originated from [GATK Best Practices Resources](https://con
 ```
 wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/gatk-resources/1000g_pon.hg38.vcf.gz
 ```
-#### Additional files needed for scatter/gather:
+#### Additional files needed for scatter and gather
 
 | file name | size | md5sum |
 |--------------------------------|------------|----------------------------------|
@@ -137,9 +158,22 @@ for the Mutect2 workflow. To get the files you may just clone the repo, or downl
 wget https://raw.githubusercontent.com/icgc-argo/gatk-mutect2-variant-calling/main/assets/mutect2.scatter_by_chr/chr1.interval_list
 ```
 
+### Open Access Variant Filtering
+#### Genomic regions defined in BED format
+| file name | size | md5sum |
+|--------------------------------|------------|----------------------------------|
+| open_access.gencode_v38.20210915.bed.gz | 129538 | 6c6781661cd3bf2c3060577e597928d3 |
+
+The file has been checked into [GitHub repository](https://github.com/icgc-argo/open-access-regions/tree/main/data/hg38/bed/gencode.v38) for the workflow. To get the file you may just clone the repo, or download using
+`wget` using the URL pattern as in the following example:
+
+```
+wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/open-access-regions/open_access.gencode_v38.20210915.bed.gz
+```
+
 
 ## ICGC-ARGO RNA-Seq Analysis
-### Reference genome 
+### RNA-Seq reference genome 
 - GRCh38 Genome Build Version: [GRCh38_Verily_v1](https://console.cloud.google.com/storage/browser/genomics-public-data/references/GRCh38_Verily)
 
 | file name | size | md5sum |
@@ -162,7 +196,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/r
   - Decoy sequences
   - Epstein-Barr virus (EBV) sequence
 
-### Genome annotation files
+### RNA-Seq genome annotation files
 - [GENCODE v40](https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_40/gencode.v40.chr_patch_hapl_scaff.annotation.gtf.gz) contains the comprehensive gene annotation on the reference chromosomes, scaffolds, assembly patches and alternate loci (haplotypes)
 
 | file name | size | md5sum |
@@ -231,7 +265,7 @@ below:
 wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.HISAT2index/GRCh38_Verily_v1.log
 ```
 
-#### Picard: CollectRnaSeqMetrics auxilary files
+#### Picard-CollectRnaSeqMetrics auxilary files
 - `--ref_flat`: a tab-delimited file containing information about the location of RNA transcripts, exon start and stop sites, etc. 
 - `--ribosomal_interval_list`: provide the locations of rRNA sequences in the genome in interval_list format. If not specified no bases will be identified as being ribosomal. 
 
