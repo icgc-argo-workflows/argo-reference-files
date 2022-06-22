@@ -180,6 +180,9 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/o
 |--------------------------------|------------|----------------------------------|
 | GRCh38_Verily_v1.genome.fa        | 3150152408 | 16626761857940321a7a1142e03f8217 |
 | GRCh38_Verily_v1.genome.fa.fai     | 123145  | b373ad1f64003c910dce216f93718aab |
+| GRCh38_Verily_v1.genome.fa.gz | 887918831 | 1fb31dcb45ca7c52d0e27c523504bc9a |
+| GRCh38_Verily_v1.genome.fa.gz.gzi | 772104 | 55b7a860d1cef3793fcda54af56664e3 |
+| GRCh38_Verily_v1.genome.fa.gz.fai | 123145 | b373ad1f64003c910dce216f93718aab |
 | README.txt  | 1492  | db3b3e4233b6ddb92ff3e3dc152ccda8 |
 
 The above files need to be staged under a path in the file system where workflow
