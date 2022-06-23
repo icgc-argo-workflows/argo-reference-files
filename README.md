@@ -274,7 +274,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/r
 
 | file name | size | md5sum |
 |--------------------------------|------------|----------------------------------|
-| GRCh38_Verily_v1.rRNA.interval_list | 4089 | e5f74657a1277d75fa6f4eab495f6370 |
+| GRCh38_Verily_v1.rRNA.interval_list | 134077 | 6e00a55590ec6cbddafe9bd59f7f444b |
 | GRCh38_Verily_v1.refFlat.txt.gz | 8043021 | 21ebee2684e7be6df13500d880b2b6ad |
 
 The above files need to be staged under a path in the file system where workflow
