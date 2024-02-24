@@ -21,7 +21,7 @@
 
 ## Introduction
 
-Reference files used by AROG workflows are hosted at [Cancer Genome Collaboratory](https://cancercollaboratory.org/). File size and MD5 checksums are provided for verifying file integrity after download. Additional files are also included to allow for reproduction of ARGO pipeline analyses. Please see the individual sections for the reference files and how to download and stage them before running the workflows.
+You can download the reference files used by AROG workflows by following the instructions below. File size and MD5 checksums are provided for verifying file integrity after download. Additional files are also included to allow for reproduction of ARGO pipeline analyses. Please see the individual sections for the reference files and how to download and stage them before running the workflows.
 
 ## ICGC-ARGO DNA-Seq Analysis
 
@@ -40,7 +40,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/reference-genome/GRCh38_hla_decoy_ebv/GRCh38_hla_decoy_ebv.fa.fai
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/reference-genome/GRCh38_hla_decoy_ebv/GRCh38_hla_decoy_ebv.fa.fai
 ```
 
 - This reference genome is used by the ICGC ARGO for DNA-Seq Analysis. This file is composed of the following sequences:
@@ -74,7 +74,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/reference-genome/GRCh38_hla_decoy_ebv/GRCh38_hla_decoy_ebv.dict
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/reference-genome/GRCh38_hla_decoy_ebv/GRCh38_hla_decoy_ebv.dict
 ```
 
 ### Sanger Somatic Variant Calling
@@ -94,7 +94,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/sanger-variant-calling/qcGenotype_GRCh38_hla_decoy_ebv.tar.gz
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/sanger-variant-calling/qcGenotype_GRCh38_hla_decoy_ebv.tar.gz
 ```
 
 ### GATK Mutect2 Somatic Variant Calling
@@ -118,7 +118,7 @@ wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/s
 The above files were originated from [GATK Best Practices Resources](https://console.cloud.google.com/storage/browser/gatk-best-practices/somatic-hg38) and need to be staged under a path in the file system where workflow jobs can access. The files can be downloaded using `wget`, one example is given as below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/gatk-resources/1000g_pon.hg38.vcf.gz
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/gatk-resources/1000g_pon.hg38.vcf.gz
 ```
 #### Additional files needed for scatter and gather
 
@@ -168,7 +168,7 @@ The file has been checked into [GitHub repository](https://github.com/icgc-argo/
 `wget` using the URL pattern as in the following example:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/open-access-regions/open_access.gencode_v38.20210915.bed.gz
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/open-access-regions/open_access.gencode_v38.20210915.bed.gz
 ```
 
 
@@ -190,7 +190,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.genome/README.txt
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.genome/README.txt
 ```
 
 
@@ -211,7 +211,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.annotation/gencode.v40.chr_patch_hapl_scaff.annotation.gtf
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.annotation/gencode.v40.chr_patch_hapl_scaff.annotation.gtf
 ```
 
 ### RNA-Seq Alignment
@@ -242,7 +242,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.STARindex.sjdbOverhang_75/STARindex.log
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.STARindex.sjdbOverhang_75/STARindex.log
 ```
 
 
@@ -265,7 +265,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.HISAT2index/GRCh38_Verily_v1.log
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.HISAT2index/GRCh38_Verily_v1.log
 ```
 
 #### Picard-CollectRnaSeqMetrics auxilary files
@@ -282,7 +282,7 @@ jobs can access. The files can be downloaded using `wget`, one example is given 
 below:
 
 ```
-wget https://object.cancercollaboratory.org:9080/swift/v1/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.Picard_CollectRnaSeqMetrics/GRCh38_Verily_v1.rRNA.interval_list
+wget https://swengbioinfo.blob.core.windows.net/genomics-public-data/rna-seq-references/GRCh38_Verily_v1.Picard_CollectRnaSeqMetrics/GRCh38_Verily_v1.rRNA.interval_list
 ```
 
 
